@@ -29,10 +29,9 @@ class Home extends Component {
     // dealing with a larger data sensitive project.
     todo.id = Math.random();
     // Create a array that contains the current array and the new todo item
-    //const exists = this.state.todos.find(t => t.content === todo.content)
-    //if(exists === true){
-      //return;
-   // }
+    if( this.state.todos.find(t => t.content === todo.content)){     
+       return;
+   }
 
     let new_list = [...this.state.todos, todo];
     // Update the local state with the new array.
